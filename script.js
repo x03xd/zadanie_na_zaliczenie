@@ -59,20 +59,22 @@ function displayDishes(category) {
             image.src = dish.image;
             image.alt = dish.name;
             image.classList.add('main-image');
+            image.loading = 'lazy';  
             box.appendChild(image);
-
+        
             const overlayImage = document.createElement('img');
             overlayImage.src = 'images/hamster.svg';
             overlayImage.alt = 'Hamster Overlay';
             overlayImage.style.width = '50px';
             overlayImage.style.height = '50px';
-
+            overlayImage.loading = 'lazy';  
+        
             if (category === "pizza") {
                 overlayImage.style.left = '67%';
             } else {
                 overlayImage.style.left = '76%';
             }
-
+        
             overlayImage.classList.add('overlay-image');
             box.appendChild(overlayImage);
         }
